@@ -4,195 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carlos Arbey Toquica — Consultoría Tributaria y Empresarial</title>
-  <meta name="description" content="Contador Público y Asesor Tributario. Servicios de contabilidad, declaraciones de renta, revisoría fiscal y outsourcing contable. Neiva, Huila.">
+  <meta name="description" content="Contador Público y Asesor Tributario. Servicios de contabilidad, declaraciones de renta, revisoría fiscal y outsourcing contable.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f5f0;
-      color: #1a2d52;
-      min-height: 100vh;
-    }
-    .wrap {
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 2.5rem 1.25rem 3rem;
-    }
-    /* LOGO */
-    .logo-box {
-      text-align: center;
-      margin-bottom: 0.5rem;
-    }
-    .logo-inner {
-      display: inline-flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .logo-icon {
-      background: #1a2d52;
-      border-radius: 6px;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 38px;
-      color: white;
-      flex-shrink: 0;
-    }
+    body { font-family: 'Inter', sans-serif; background: #f7f5f0; color: #1a2d52; min-height: 100vh; }
+    .wrap { max-width: 480px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+    .logo-box { text-align: center; margin-bottom: 1rem; }
+    .logo-inner { display: inline-flex; align-items: center; gap: 20px; }
+    .logo-icon { background: #1a2d52; border-radius: 6px; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 38px; color: white; flex-shrink: 0; }
     .logo-icon span { color: #c9a84c; }
     .logo-sep { width: 1.5px; height: 72px; background: #c9a84c; }
     .logo-text { text-align: left; }
-    .logo-text .ln1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      letter-spacing: 4px;
-      color: #1a2d52;
-      line-height: 1.2;
-    }
-    .logo-text .ln2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      letter-spacing: 4px;
-      color: #c9a84c;
-      line-height: 1.2;
-    }
-    .logo-text .ln3 {
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: #1a2d52;
-      margin-top: 6px;
-      border-top: 1px solid #c9a84c;
-      padding-top: 5px;
-    }
-    .tp {
-      font-size: 12px;
-      color: #8a7340;
-      text-align: center;
-      margin-top: 10px;
-      letter-spacing: 0.04em;
-    }
-    /* DIVISOR */
-    .gold-line {
-      border: none;
-      border-top: 1px solid #c9a84c;
-      margin: 1.5rem 0;
-    }
-    /* ETIQUETA SECCIÓN */
-    .section-label {
-      font-size: 10px;
-      font-weight: 500;
-      color: #8a7340;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      text-align: center;
-      margin-bottom: 0.85rem;
-    }
-    /* BOTÓN WHATSAPP */
-    .btn-wa {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: #1a2d52;
-      color: #f5f0e8;
-      border-radius: 12px;
-      padding: 14px;
-      font-size: 15px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
+    .logo-text .ln1 { font-family: 'Playfair Display', serif; font-size: 18px; letter-spacing: 4px; color: #1a2d52; line-height: 1.2; }
+    .logo-text .ln2 { font-family: 'Playfair Display', serif; font-size: 18px; letter-spacing: 4px; color: #c9a84c; line-height: 1.2; }
+    .logo-text .ln3 { font-size: 9px; letter-spacing: 2px; color: #1a2d52; margin-top: 6px; border-top: 1px solid #c9a84c; padding-top: 5px; }
+    .gold-line { border: none; border-top: 1px solid #c9a84c; margin: 1.5rem 0; }
+    .section-label { font-size: 10px; font-weight: 500; color: #8a7340; text-transform: uppercase; letter-spacing: 0.12em; text-align: center; margin-bottom: 0.85rem; }
+    .btn-wa { display: flex; align-items: center; justify-content: center; gap: 10px; background: #1a2d52; color: #f5f0e8; border-radius: 12px; padding: 14px; font-size: 15px; font-weight: 500; text-decoration: none; }
     .btn-wa:hover { background: #243d70; }
     .btn-wa svg { width: 22px; height: 22px; fill: #c9a84c; flex-shrink: 0; }
-    /* SERVICIOS */
-    .service-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .service-card {
-      background: #ffffff;
-      border: 0.5px solid #c9a84c55;
-      border-radius: 12px;
-      padding: 14px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .service-card { background: #ffffff; border: 0.5px solid #c9a84c55; border-radius: 12px; padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; }
     .service-card.full { grid-column: span 2; }
-    .s-icon { font-size: 22px; color: #c9a84c; }
+    .s-icon { font-size: 22px; }
     .s-name { font-size: 13px; font-weight: 500; color: #1a2d52; }
     .s-desc { font-size: 11px; color: #666; line-height: 1.45; }
-    .s-link {
-      margin-top: auto;
-      font-size: 11px;
-      color: #c9a84c;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-    }
-    /* INFOPRODUCTOS */
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .info-card {
-      background: #1a2d52;
-      border-radius: 12px;
-      padding: 14px 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    .s-link { margin-top: auto; font-size: 11px; color: #c9a84c; text-decoration: none; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .info-card { background: #1a2d52; border-radius: 12px; padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; }
     .info-card.full { grid-column: span 2; }
-    .info-badge {
-      font-size: 10px;
-      font-weight: 500;
-      background: #c9a84c;
-      color: #1a2d52;
-      border-radius: 20px;
-      padding: 2px 9px;
-      align-self: flex-start;
-    }
+    .info-badge { font-size: 10px; font-weight: 500; background: #c9a84c; color: #1a2d52; border-radius: 20px; padding: 2px 9px; align-self: flex-start; }
     .i-name { font-size: 13px; font-weight: 500; color: #f5f0e8; }
     .i-price { font-size: 12px; color: #c9a84c; }
-    .i-link {
-      font-size: 11px;
-      color: #c9a84c;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      margin-top: 4px;
-    }
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      font-size: 11px;
-      color: #8a7340;
-      margin-top: 2rem;
-      letter-spacing: 0.03em;
-    }
+    .i-link { font-size: 11px; color: #c9a84c; text-decoration: none; margin-top: 4px; }
+    .footer { text-align: center; font-size: 11px; color: #8a7340; margin-top: 2rem; }
   </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- LOGO -->
   <div class="logo-box">
-    <!--
-      INSTRUCCIONES:
-      Si tienes el archivo de tu logo (logo.png o logo.svg), reemplaza todo el bloque
-      .logo-inner de abajo por:
-        <img src="logo.png" alt="Carlos Arbey Toquica" style="max-width:300px;width:100%;">
-      y coloca el archivo logo.png en la misma carpeta que este index.html.
-    -->
     <div class="logo-inner">
       <div class="logo-icon">C<span>A</span>T</div>
       <div class="logo-sep"></div>
@@ -203,11 +56,9 @@
       </div>
     </div>
   </div>
-  <p class="tp">Contador Público &nbsp;·&nbsp; T.P. 236170-T</p>
 
   <hr class="gold-line">
 
-  <!-- WHATSAPP -->
   <p class="section-label">Contacto directo</p>
   <a class="btn-wa" href="https://wa.me/573114434227" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -219,7 +70,6 @@
 
   <hr class="gold-line">
 
-  <!-- SERVICIOS -->
   <p class="section-label">Servicios</p>
   <div class="service-grid">
     <div class="service-card">
@@ -232,7 +82,7 @@
       <div class="s-icon">🏢</div>
       <p class="s-name">Contabilidad empresas</p>
       <p class="s-desc">Registros, estados financieros y reportes periódicos.</p>
-      <a class="s-link" href="https://wa.me/573114434227?text=Hola%2C%20quiero%20información%20sobre%20contabilidad%20para%20empresas" target="_blank">Consultar →</a>
+      <a class="s-link" href="https://wa.me/573114434227?text=Hola%2C%20quiero%20información%20sobre%20contabilidad" target="_blank">Consultar →</a>
     </div>
     <div class="service-card">
       <div class="s-icon">📄</div>
@@ -256,26 +106,24 @@
 
   <hr class="gold-line">
 
-  <!-- INFOPRODUCTOS -->
   <p class="section-label">Infoproductos y cursos</p>
   <div class="info-grid">
     <div class="info-card">
       <span class="info-badge">Nuevo</span>
       <p class="i-name">Guía: Exógena DIAN 2025</p>
-      <p class="i-price">$ — (próximamente)</p>
-      <!-- Reemplaza # con el enlace de venta cuando lo tengas -->
+      <p class="i-price">Próximamente</p>
       <a class="i-link" href="#">Ver más →</a>
     </div>
     <div class="info-card">
       <span class="info-badge">Curso</span>
       <p class="i-name">Retención en la fuente paso a paso</p>
-      <p class="i-price">$ — (próximamente)</p>
+      <p class="i-price">Próximamente</p>
       <a class="i-link" href="#">Ver más →</a>
     </div>
     <div class="info-card full">
       <span class="info-badge">Plantilla</span>
       <p class="i-name">Pack de documentos contables y laborales</p>
-      <p class="i-price">$ — (próximamente)</p>
+      <p class="i-price">Próximamente</p>
       <a class="i-link" href="#">Ver más →</a>
     </div>
   </div>
